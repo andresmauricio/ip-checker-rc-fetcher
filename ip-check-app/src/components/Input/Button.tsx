@@ -7,7 +7,7 @@ export const Button = styled.div`
   justify-content: center;
   height: 40px;
   width: 40px;
-  background-color: hsl(0, 0%, 17%);
+  background-color: var(--very-dark-gray);
   background-image: url(${arrow});
   background-repeat: no-repeat;
   background-size: 10px;
@@ -16,6 +16,6 @@ export const Button = styled.div`
   border-bottom-right-radius: 10px;
   cursor: pointer;
   &:hover {
-    background-color: hsl(0, 0%, 59%);
+    background-color: var(--dark-gray);
   }
 `;

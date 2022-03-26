@@ -7,11 +7,11 @@ export const Input = styled.input`
   padding: 0px 10px;
   outline: none;
   border: none;
-  color: hsl(0, 0%, 17%);
+  color: var(--very-dark-gray);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   &::placeholder {
-    color: hsl(0, 0%, 59%);
+    color: var(--dark-gray);
     font-size: 14px;
   }
 `;
