@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { Fragment } from "react";
+import { Header } from "./components/Header/index";
 
 function App() {
   return (
-    <h1>Check Ip App</h1>
+    <Fragment>
+      <Header />
+    </Fragment>
   );
 }
 
