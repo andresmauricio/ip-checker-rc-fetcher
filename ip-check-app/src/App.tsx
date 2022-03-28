@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { GlobalStyles } from "./shared/styles/GlobalStyles";
+import "./shared/styles/map.css"
 import { Global } from "@emotion/react";
 import { Header } from "./components/Header/index";
 import { Summary } from "./components/Summary";

@@ -13,4 +13,7 @@ export const Background = styled.div`
   align-items: center;
   justify-content: center;
   padding-bottom: 75px;
+  @media (max-width: 768px) {
+    padding-bottom: 125px;
+  }
 `;

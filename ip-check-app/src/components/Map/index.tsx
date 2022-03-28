@@ -6,7 +6,7 @@ export function Map({ location }: { location: any }) {
     <MapContainer
       center={{ lat: location.lat, lng: location.lng }}
       zoom={15}
-      style={{ height: "60vh", width: "100wh", marginTop: "-75px" }}
+      className="responsive-map"
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

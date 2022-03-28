@@ -14,4 +14,11 @@ export const Card = styled.div`
   justify-content: space-between;
   position: relative;
   z-index: 999;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    min-height: 250px;
+    margin-top: -125px;
+
+    }
 `;

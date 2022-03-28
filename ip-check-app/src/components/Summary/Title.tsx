@@ -7,4 +7,8 @@ export const Title = styled.h3`
   font-weight: 700;
   letter-spacing: 3px;
   margin-bottom: 15px;
+  @media (max-width: 768px) {
+    margin-bottom: 0px;
+    font-size: 12px;
+  }
 `;
