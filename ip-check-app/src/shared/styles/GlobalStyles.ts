@@ -15,5 +15,7 @@ export const GlobalStyles = css`
   body {
     font-size: 18px;
     font-family: "Rubik", sans-serif;
+    max-width: 1920px;
+    margin: 0 auto;
   }
 `;
