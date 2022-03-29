@@ -20,7 +20,7 @@ export function InputSearch() {
     }
   };
   return (
-    <Wrap>
+    <Wrap data-testid="container">
       <Input
         placeholder="Search for any IP address or domain"
         type="text"
@@ -28,7 +28,7 @@ export function InputSearch() {
         onChange={(e) => searchValue(e)}
         onKeyPress={search}
       />
-      <Button onClick={search}></Button>
+      <Button data-testid="button-search" onClick={search}></Button>
     </Wrap>
   );
 }

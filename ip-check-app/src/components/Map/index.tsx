@@ -4,7 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 export function Map({ location }: { location: any }) {
   return (
     <MapContainer
-      center={{ lat: location.lat, lng: location.lng }}
+      center={{ lat: location?.lat || 0, lng: location?.lng || 0 }}
       zoom={15}
       className="responsive-map"
     >
@@ -21,14 +21,12 @@ const Markerwhatever = ({ location }: any) => {
   const map = useMap();
 
   useEffect(() => {
-    map.panTo({ lat: location.lat, lng: location.lng });
+    map?.panTo({ lat: location?.lat || 0, lng: location?.lng || 0 });
   }, [location]);
 
   return (
-    <Marker position={{ lat: location.lat, lng: location.lng }}>
-      <Popup>
-        Location
-      </Popup>
+    <Marker position={{ lat: location?.lat || 0, lng: location?.lng || 0 }}>
+      <Popup>Location</Popup>
     </Marker>
   );
 };
