@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useQuery } from "react-query";
 import { getDetailIp, getIp } from "../../services/ip.service";
 import { Card } from "./Card";
 import { Column } from "./Column";

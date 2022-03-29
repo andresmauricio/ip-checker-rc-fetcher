@@ -1,20 +1,23 @@
 import React, { useState } from "react";
+import { useQuery } from "react-query";
+import { getDetailIp } from "../../services/ip.service";
 import { Button } from "./Button";
 import { Input } from "./Input";
 import { Wrap } from "./Wrap";
 
-const regexIp = new RegExp("^(?:[0-9]{1,3}.){3}[0-9]{1,3}$");
-
-export function InputSearch({ searchIp }: any) {
+export function InputSearch() {
   const [ip, setIp] = useState("");
+  const { refetch } = useQuery("detail", () => getDetailIp(ip, true), {
+    enabled: false,
+  });
   const searchValue = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // const current = e.target.value.replace(regexIp, "");
     setIp(e.target.value);
   };
-  const search = (e: any) => {    
-    // const isValidIp = Boolean(Number(ip)) && regexIp.test(ip);
-    // if (!isValidIp) return;
-    if (e.key === "Enter" || e.type === 'click') searchIp(ip);
+
+  const search = (e: any) => {
+    if (e.key === "Enter" || e.type === "click") {
+      refetch();
+    }
   };
   return (
     <Wrap>

@@ -3,11 +3,11 @@ import { InputSearch } from "../Input";
 import { Background } from "./Background";
 import { Title } from "./Title";
 
-export function Header({searchIp}: any) {
+export function Header() {
   return (
     <Background>
       <Title>IP Address Tracker</Title>
-      <InputSearch searchIp={searchIp}></InputSearch>
+      <InputSearch></InputSearch>
     </Background>
   );
 }
