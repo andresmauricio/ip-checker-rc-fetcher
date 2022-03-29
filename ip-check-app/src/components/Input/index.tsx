@@ -11,10 +11,10 @@ export function InputSearch({ searchIp }: any) {
     // const current = e.target.value.replace(regexIp, "");
     setIp(e.target.value);
   };
-  const search = (e: any) => {
+  const search = (e: any) => {    
     // const isValidIp = Boolean(Number(ip)) && regexIp.test(ip);
     // if (!isValidIp) return;
-    if (e.key === "Enter") searchIp(ip);
+    if (e.key === "Enter" || e.type === 'click') searchIp(ip);
   };
   return (
     <Wrap>
@@ -25,7 +25,7 @@ export function InputSearch({ searchIp }: any) {
         onChange={(e) => searchValue(e)}
         onKeyPress={search}
       />
-      <Button></Button>
+      <Button onClick={search}></Button>
     </Wrap>
   );
 }
