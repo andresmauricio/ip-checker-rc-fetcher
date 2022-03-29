@@ -3,11 +3,11 @@ import { useQuery } from "react-query";
 import { getDetailIp, getIp } from "../../services/ip.service";
 import { Card } from "./Card";
 import { Column } from "./Column";
+import { ISummary } from "./models/ISumarry";
 import { Result } from "./Result";
 import { Title } from "./Title";
 
-export function Summary({ data }: { data: any }) {
-
+export function Summary({ data }: ISummary) {
   return (
     <Card>
       {data &&

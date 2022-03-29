@@ -9,7 +9,7 @@ import { getDetailIp, getIp } from "./services/ip.service";
 import { useQuery } from "react-query";
 
 function App() {
-  const { data: ip } = useQuery("ip", getIp);
+  const { data: ip } = useQuery("ip", getIp, { refetchOnWindowFocus: false });
   const { data: detail } = useQuery("detail", () => getDetailIp(ip, true), {
     initialData: { location: { lat: 51.505, lng: -0.09 }, summary: [] },
     enabled: !!ip,
